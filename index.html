@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechNova Afrique – La performance qui vous rapproche de vos projets.</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#0f172a',
+            accent: '#38bdf8',
+            surface: '#f8fafc',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-surface text-primary font-sans">
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- NAVBAR                                                      -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <header id="navbar" class="fixed top-0 left-0 right-0 z-50 navbar-glass">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+
+        <!-- Logo -->
+        <a href="#hero" class="flex items-center gap-3 group">
+          <div class="logo-icon w-9 h-9 rounded-xl flex items-center justify-center">
+            <i class="fa-solid fa-microchip text-white text-sm"></i>
+          </div>
+          <span class="font-black text-lg tracking-tight text-primary">
+            Tech<span class="text-accent">Nova</span>
+            <span class="text-xs font-medium text-gray-400 block leading-none -mt-0.5">Afrique</span>
+          </span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="#about" class="nav-link text-sm font-medium text-gray-600 hover:text-accent transition-colors">À propos</a>
+          <a href="#catalogue" class="nav-link text-sm font-medium text-gray-600 hover:text-accent transition-colors">Catalogue</a>
+          <a href="#reviews" class="nav-link text-sm font-medium text-gray-600 hover:text-accent transition-colors">Avis clients</a>
+          <a href="#contact" class="nav-link text-sm font-medium text-gray-600 hover:text-accent transition-colors">Contact</a>
+        </nav>
+
+        <!-- CTA Desktop -->
+        <div class="hidden md:flex items-center gap-3">
+          <a id="nav-whatsapp" href="#" target="_blank"
+             class="whatsapp-btn flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold text-white transition-all duration-300">
+            <i class="fa-brands fa-whatsapp text-base"></i>
+            Commander
+          </a>
+        </div>
+
+        <!-- Burger Mobile -->
+        <button id="burger-btn" class="md:hidden flex flex-col gap-1.5 p-2 rounded-lg hover:bg-gray-100 transition-colors" aria-label="Menu">
+          <span class="burger-line w-5 h-0.5 bg-primary rounded-full transition-all duration-300"></span>
+          <span class="burger-line w-5 h-0.5 bg-primary rounded-full transition-all duration-300"></span>
+          <span class="burger-line w-5 h-0.5 bg-primary rounded-full transition-all duration-300"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu-closed md:hidden overflow-hidden bg-white border-t border-gray-100">
+      <div class="px-4 py-4 flex flex-col gap-3">
+        <a href="#about" class="mobile-nav-link py-2 px-3 rounded-lg text-sm font-medium text-gray-700 hover:bg-accent/10 hover:text-accent transition-all">À propos</a>
+        <a href="#catalogue" class="mobile-nav-link py-2 px-3 rounded-lg text-sm font-medium text-gray-700 hover:bg-accent/10 hover:text-accent transition-all">Catalogue</a>
+        <a href="#reviews" class="mobile-nav-link py-2 px-3 rounded-lg text-sm font-medium text-gray-700 hover:bg-accent/10 hover:text-accent transition-all">Avis clients</a>
+        <a href="#contact" class="mobile-nav-link py-2 px-3 rounded-lg text-sm font-medium text-gray-700 hover:bg-accent/10 hover:text-accent transition-all">Contact</a>
+        <a id="mobile-whatsapp" href="#" target="_blank"
+           class="whatsapp-btn flex items-center justify-center gap-2 py-3 rounded-xl text-sm font-semibold text-white mt-2">
+          <i class="fa-brands fa-whatsapp text-base"></i>
+          Nous contacter sur WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- HERO                                                        -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section id="hero" class="hero-section relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+
+    <!-- Animated background grid -->
+    <div class="hero-grid absolute inset-0 opacity-10"></div>
+
+    <!-- Floating orbs -->
+    <div class="orb orb-1 absolute w-96 h-96 rounded-full blur-3xl opacity-20"></div>
+    <div class="orb orb-2 absolute w-72 h-72 rounded-full blur-3xl opacity-15"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full hero-badge text-sm font-medium mb-8 fade-in-up" style="animation-delay:0.1s">
+        <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+        Votre partenaire tech en Afrique
+      </div>
+
+      <!-- Headline -->
+      <h1 class="hero-title text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black leading-tight mb-6 fade-in-up" style="animation-delay:0.2s">
+        La performance qui<br>
+        <span class="accent-gradient">vous rapproche</span><br>
+        de vos projets.
+      </h1>
+
+      <!-- Subline -->
+      <p class="hero-sub text-lg sm:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed fade-in-up" style="animation-delay:0.35s">
+        Ordinateurs neufs, accessoires essentiels et accompagnement personnalisé — du conseil à la livraison.
+      </p>
+
+      <!-- CTAs -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 fade-in-up" style="animation-delay:0.5s">
+        <a href="#catalogue"
+           class="cta-primary flex items-center gap-2 px-8 py-4 rounded-2xl font-bold text-white text-base transition-all duration-300 shadow-xl">
+          <i class="fa-solid fa-laptop"></i>
+          Voir le catalogue
+        </a>
+        <a id="hero-whatsapp" href="#" target="_blank"
+           class="whatsapp-btn flex items-center gap-2 px-8 py-4 rounded-2xl font-bold text-white text-base transition-all duration-300 shadow-xl">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          Commander via WhatsApp
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="grid grid-cols-3 gap-6 max-w-lg mx-auto mt-16 fade-in-up" style="animation-delay:0.65s">
+        <div class="stat-card rounded-2xl p-4 text-center">
+          <div class="text-2xl font-black text-accent">4+</div>
+          <div class="text-xs text-gray-400 mt-1">Gammes produits</div>
+        </div>
+        <div class="stat-card rounded-2xl p-4 text-center">
+          <div class="text-2xl font-black text-accent">100%</div>
+          <div class="text-xs text-gray-400 mt-1">Clients satisfaits</div>
+        </div>
+        <div class="stat-card rounded-2xl p-4 text-center">
+          <div class="text-2xl font-black text-accent">24h</div>
+          <div class="text-xs text-gray-400 mt-1">Livraison rapide</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40">
+      <span class="text-xs text-gray-400 tracking-widest uppercase">Découvrir</span>
+      <div class="scroll-arrow w-5 h-8 border-2 border-gray-400 rounded-full flex items-start justify-center pt-1.5">
+        <div class="w-1 h-2 bg-gray-400 rounded-full scroll-dot"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <!-- ABOUT                                                       -->
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section id="about" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+        <!-- Text -->
+        <div class="reveal">
+          <div class="section-label inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-6">
+            <i class="fa-solid fa-circle-info text-accent"></i>
+            À propos de nous
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-black text-primary leading-tight mb-6">
+            Votre partenaire tech<br>
+            <span class="accent-gradient">de confiance</span>
+          </h2>
+          <p class="text-gray-500 text-lg leading-relaxed mb-8">
+            TechNova Afrique accompagne particuliers, étudiants, entrepreneurs et entreprises dans le choix de solutions informatiques fiables et adaptées à leurs besoins. Nous proposons des ordinateurs neufs, des accessoires essentiels et un accompagnement personnalisé, du conseil à la livraison.
+          </p>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="about-feature-card rounded-2xl p-4 flex items-start gap-3">
+              <div class="w-9 h-9 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
+                <i class="fa-solid fa-shield-halved text-accent text-sm"></i>
+              </div>
+              <div>
+                <div class="font-semibold text-sm text-primary">Produits fiables</div>
+                <div class="text-xs text-gray-400 mt-0.5">Sélectionnés avec soin</div>
+              </div>
+            </div>
+            <div class="about-feature-card rounded-2xl p-4 flex items-start gap-3">
+              <div class="w-9 h-9 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
+                <i class="fa-solid fa-headset text-accent text-sm"></i>
+              </div>
+              <div>
+                <div class="font-semibold text-sm text-primary">Support dédié</div>
+                <div class="text-xs text-gray-400 mt-0.5">Disponible sur WhatsApp</div>
+              </div>
+            </div>
+            <div class="about-feature-card rounded-2xl p-4 flex items-start gap-3">
+              <div class="w-9 h-9 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
+                <i class="fa-solid fa-truck-fast text-accent text-sm"></i>
+              </div>
+              <div>
+                <div class="font-semibold text-sm text-primary">Livraison rapide</div>
+                <div class="text-xs text-gray-400 mt-0.5">Partout en Afrique</div>
+              </div>
+            </div>
+            <div class="about-feature-card rounded-2xl p-4 flex items-start gap-3">
+              <div class="w-9 h-9 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
+                <i class="fa-solid fa-comments text-accent text-sm"></i>
+              </div>
+              <div>
+                <div class="font-semibold text-sm text-primary">Conseil expert</div>
+                <div class="text-xs text-gray-400 mt-0.5">Personnalisé & gratuit</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visual -->
+        <div class="reveal about-visual-wrap relative flex items-center justify-center">
+          <div class="about-visual-bg w-80 h-80 rounded-3xl"></div>
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="about-visual-card rounded-3xl p-10 shadow-2xl flex flex-col items-center gap-6">
+              <div class="w-20 h-20 rounded-2xl bg-accent/10 flex items-center justify-center">
+                <i class="fa-solid fa-laptop-code text-accent text-4xl"></i>
+              </div>
+              <div class="text-center">
+                <div class="font-black text-2xl text-primary">TechNova</div>
+                <div class="text-accent font-semibold">Afrique</div>
+              </div>
+              <div class="flex gap-1">
+                <i class="fa-solid fa-star text-yellow-400
